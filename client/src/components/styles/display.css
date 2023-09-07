@@ -1,0 +1,75 @@
+div,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+img {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+/* Headings */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  line-height: 1;
+  font-weight: 300;
+}
+
+/* =Template
+-------------------------------------------------------------- */
+#wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 60px 0;
+}
+section h1 {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+section p {
+  margin-bottom: 30px;
+}
+section p:last-child {
+  margin-bottom: 0;
+}
+section.color {
+  background-color: darkgrey;
+  color: white;
+}
+
+/* =Extras
+-------------------------------------------------------------- */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0;
+}
+
+#myHeaderClass {
+  text-align: center;
+  /* font-size: xx-large; */
+  /* font-weight: 900; */
+}
+.myLink {
+  color: white;
+}
+.paddingClass {
+  padding-top: 14%;
+}

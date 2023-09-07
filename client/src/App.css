@@ -1,0 +1,254 @@
+body {
+  font-family: "Lato", sans-serif;
+}
+
+.main-head {
+  height: 150px;
+  background: #fff;
+}
+
+.sidenav {
+  height: 100%;
+  background-color: #000;
+  overflow-x: hidden;
+  padding-top: 0px;
+}
+
+.main {
+  padding: 0px 10px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 10px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .login-form {
+    margin-top: 10%;
+  }
+
+  .register-form {
+    margin-top: 10%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    margin-left: 50%;
+  }
+
+  .sidenav {
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .login-form {
+    margin-top: 60%;
+  }
+}
+
+.login-main-text {
+  margin-top: 20%;
+  padding: 60px;
+  color: #fff;
+}
+
+.login-main-text h2 {
+  font-weight: 300;
+}
+
+.btn-black {
+  background-color: #000 !important;
+  color: #fff;
+}
+img {
+  height: 20%;
+  width: 50%;
+  background-repeat: repeat;
+}
+.myPadding {
+  padding-top: 15%;
+}
+
+.alertClass {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  color: red;
+}
+
+/* Font Imports ************************************************************* */
+
+@import url("https://fonts.googleapis.com/css?family=Oxygen");
+
+/* Gradient Header Styling ************************************************** */
+#gradient-header {
+  background: linear-gradient(110deg, #7c99b4, #161b33);
+}
+#gradient-footer {
+  background: linear-gradient(110deg, #161b33, #7c99b4);
+}
+
+/* Defining Font Families *************************************************** */
+.f-prime {
+  font-family: "Oxygen", sans-serif;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.f-second,
+.f-third {
+  font-family: "Oxygen", sans-serif;
+  font-weight: normal;
+}
+
+/* Defining Font Sizing ***************************************************** */
+.large {
+  font-size: 2.5rem;
+}
+.med {
+  font-size: 2rem;
+}
+.sml {
+  font-size: 1.5rem;
+}
+
+/* Defining Font Colors ***************************************************** */
+.primes {
+  color: #172a3a;
+}
+.seconds {
+  color: #4c5c68;
+}
+.thirds {
+  color: #a0b9bf;
+}
+
+/* Card Styling ************************************************************* */
+
+.card {
+  background-color: transparent;
+  border: 0px;
+}
+.card .thumbnail {
+  background-color: #ffffff;
+  box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.25);
+  border: 0px;
+  border-radius: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.card .thumbnail .caption {
+  background: linear-gradient(45deg, #4c5c68, #a0b9bf);
+  margin: -20px 20px 20px 20px;
+  padding: 19px 29px 19px 29px;
+  position: relative;
+  border: 0px;
+}
+.card .thumbnail .caption hr {
+  border-top: 1px solid rgba(255, 255, 255, 0.25);
+  margin: 20px 40px;
+}
+.card .thumbnail .caption p {
+  font-weight: normal;
+  font-size: 0.8rem;
+  color: #ffffff;
+}
+.card .thumbnail .caption .btn-card {
+  background-color: transparent;
+  border: 1px solid #ffffff;
+  font-weight: normal;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 0.25rem 1.25rem;
+  color: #ffffff;
+  transition: 0.5s ease;
+  border-radius: 0px;
+}
+.card .thumbnail .caption .btn-card:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border: 1px solid #ffffff;
+  color: #ffffff;
+}
+.card .thumbnail img {
+  width: 100%;
+  height: auto;
+}
+
+/* ************************************************************************** */
+
+.myAssets {
+  padding-top: 8%;
+}
+/********************/
+.card {
+  transition: 0.5s;
+  cursor: pointer;
+}
+.card-title {
+  font-size: 20px;
+  transition: 1s;
+  cursor: pointer;
+}
+.card-title i {
+  font-size: 15px;
+  transition: 1s;
+  cursor: pointer;
+  color: #ffa710;
+}
+.card-title i:hover {
+  transform: scale(1.25) rotate(100deg);
+  color: #18d4ca;
+}
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.3);
+}
+.card-text {
+  height: 80px;
+}
+
+.card::before,
+.card::after {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  transform: scale3d(0, 0, 1);
+  transition: transform 0.3s ease-out 0s;
+  background: rgba(255, 255, 255, 0.1);
+  content: "";
+  pointer-events: none;
+}
+.card::before {
+  transform-origin: left top;
+}
+.card::after {
+  transform-origin: right bottom;
+}
+.card:hover::before,
+.card:hover::after,
+.card:focus::before,
+.card:focus::after {
+  transform: scale3d(1, 1, 1);
+}
+
+.myButtonDiv {
+  text-align: center;
+  background-color: rgb(31, 30, 30);
+  color: white;
+}
+
+.myError {
+  text-align: center;
+  color: red;
+}
+
+.myImageClass {
+  height: 10%;
+}
