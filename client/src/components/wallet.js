@@ -1,5 +1,5 @@
 import React from 'react'
-import { DAppProvider, useEthers, useEtherBalance, BSCTestnet, useContractFunction, MetamaskConnector } from '@usedapp/core'
+import { DAppProvider, useEthers, useEtherBalance, BSCTestnet, KlaytnTestnet, MetamaskConnector } from '@usedapp/core'
 import { formatEther } from '@ethersproject/units'
 import { getDefaultProvider, utils } from 'ethers'
 import { Contract } from '@ethersproject/contracts'
@@ -16,7 +16,7 @@ const resetBackground = e => {
 const config = {
     // readOnlyChainId: BSCTestnet.chainId,
     readOnlyUrls: {
-      [BSCTestnet.chainId]: getDefaultProvider('https://endpoints.omniatech.io/v1/bsc/testnet/public'),
+      [KlaytnTestnet.chainId]: getDefaultProvider('https://api.baobab.klaytn.net:8651'),
     },
     connectors: {
         metamask: new MetamaskConnector(),
@@ -30,7 +30,7 @@ const ConnectButton = () => {
     // const contract = new Contract(assetAdr, assetInterface)
     // const { state, send } = useContractFunction(contract, 'createChallenge')
 
-    const bscBalance = useEtherBalance(account, { chainId: BSCTestnet.chainId })
+    const bscBalance = useEtherBalance(account, { chainId: KlaytnTestnet.chainId })
     console.log("Bsc balance: ", bscBalance)
 
     function connectWallet(){
@@ -53,7 +53,7 @@ const ConnectButton = () => {
                             {
                                 bscBalance &&
                                 <div className="bal" style={{background:'yellow'}}>
-                                    <h4>BSC Balance</h4>
+                                    <h4>Account Balance</h4>
                                     {formatEther(bscBalance)}
                                 </div>
                             }

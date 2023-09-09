@@ -90,17 +90,17 @@ class AssetDisplay extends Component {
       console.log("List investment: ", this.state.investments)
     });
 
-    // axios.post(
-    //   'http://localhost:4001/v1/order/claimProfit',
-    //   {
-    //     "orderAdr": "0xC0332414569B4B891ab3F68670F32e252D377489",
-    //     "receiver": "0x0D0Df554db5623Ba9A905D0bE4C6bAc48144841E",
-    //   }
-    // ).then(resp =>{
-    //   console.log("Order withdraw resp: ", resp)
-    //   alert("Withdraw investment success: ", resp.data.data)
-    // })
-    this.setState({ isOpen: true })
+    axios.post(
+      'http://localhost:4001/v1/order/claimProfit',
+      {
+        "orderAdr": "0xB62Cf278fFe4F9Ca80d7245D76867d76fa81ccB6",
+        "receiver": "0x0D0Df554db5623Ba9A905D0bE4C6bAc48144841E",
+      }
+    ).then(resp =>{
+      console.log("Order withdraw resp: ", resp)
+      alert("Withdraw investment success: ", resp.data.data)
+    })
+    // this.setState({ isOpen: true })
   }
 
   closeModal = () => this.setState({ isOpen: false });
@@ -118,7 +118,7 @@ class AssetDisplay extends Component {
                   <b>{asset.chapterName}</b>
                 </h1>
               </div>
-              <section>
+              {/* <section>
                 <div className="container">
                   <div>
                     <h1>
@@ -165,7 +165,7 @@ class AssetDisplay extends Component {
 
                   <p>{asset.bBenefits}</p>
                 </div>
-              </section>
+              </section> */}
               <section className="color">
                 <div className="container">
                   <div>
@@ -195,12 +195,13 @@ class AssetDisplay extends Component {
               </section>
               <section>
                 <div className="container">
-                  <div className="myButtonDiv">
+                  <div className="">
                     <button
                       onClick={() => this.invest(asset)}
                       hidden={this.state.status}
                       id="myButton"
                       type="submit"
+                      className="btn btn-primary btn-lg"
                     >
                       Invest
                     </button>
