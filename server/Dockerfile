@@ -7,4 +7,5 @@ CMD ["npm", "start"]
 WORKDIR /app
 ADD package.json /app/
 RUN npm install
+RUN npm install -g nodemon
 ADD . /app
