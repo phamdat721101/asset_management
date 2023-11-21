@@ -40,6 +40,6 @@ const chapterSchema = mongoose.Schema({
   }
 });
 
-const Chapter = mongoose.model("Chapter", chapterSchema);
+const Chapter = mongoose.model("Vault", chapterSchema);
 
 module.exports = { Chapter };
