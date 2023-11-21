@@ -41,7 +41,7 @@ app.get("/", (req, res) => res.send("Hello World!"));
 
 //-------------Add Chapter------------//
 
-app.post("/api/chapters", (req, res) => {
+app.post("/api/create_vault", (req, res) => {
   const chapters = new Chapter(req.body);
   chapters.save((err, doc) => {
     if (err) return res.json({ success: false, err });
@@ -109,7 +109,7 @@ app.put("/api/updateAsset/:assetId", (req, res) => {
     { assetId: req.params.assetId },
     {
       assetName: asset.assetName,
-      bBenefits: asset.bBenefits,
+      benefits: asset.benefits,
       description: asset.description,
       gitHubLink: asset.gitHubLink,
       imgLink: asset.imgLink,

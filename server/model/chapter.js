@@ -1,12 +1,17 @@
 const mongoose = require("mongoose");
 
 const chapterSchema = mongoose.Schema({
-  chapterName: {
+  vaultName: {
     required: true,
     type: String,
     unique: 1
   },
-  chapterDescription: {
+  owner: {
+    required: true,
+    type: String,
+    unique: 1
+  },
+  vaultDesc: {
     required: true,
     type: String
   }

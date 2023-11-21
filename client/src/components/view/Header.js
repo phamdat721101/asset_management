@@ -155,6 +155,16 @@ export default class Header extends Component {
                   <li className="nav-item active">
                     <a
                       className="nav-link myClass"
+                      onClick={() => this.homePageClicked()}
+                      target="_blank"
+                    >
+                      Upload
+                      <span className="sr-only">(current)</span>
+                    </a>
+                  </li>
+                  <li className="nav-item active">
+                    <a
+                      className="nav-link myClass"
                       onClick={() => this.historyClicked()}
                       target="_blank"
                     >

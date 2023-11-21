@@ -11,7 +11,7 @@ const assetSchema = mongoose.Schema({
     type: String,
     unique: true
   },
-  chapterName: {
+  serviceName: {
     required: true,
     type: String
   },
@@ -24,7 +24,7 @@ const assetSchema = mongoose.Schema({
     required: true,
     type: String
   },
-  bBenefits: {
+  benefits: {
     type: String,
     required: true
   },
