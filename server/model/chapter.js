@@ -1,11 +1,11 @@
 const mongoose = require("mongoose");
 
 const chapterSchema = mongoose.Schema({
-  vaultAdr:{
+  vault_adr:{
     required: true,
     type: String
   },
-  vaultName: {
+  vault_name: {
     required: true,
     type: String,
     unique: 1
@@ -13,9 +13,8 @@ const chapterSchema = mongoose.Schema({
   manager: {
     required: true,
     type: String,
-    unique: 1
   },
-  vaultDesc: {
+  vault_desc: {
     required: true,
     type: String
   },
@@ -23,30 +22,30 @@ const chapterSchema = mongoose.Schema({
     required: true,
     type: String
   },
-  depositAsset: {
+  deposit_asset: {
     required: true,
     type: String
   },
-  managementFee:{
+  management_fee:{
     required:true,
     type: Number
   },
-  performanceFee:{
+  performance_fee:{
     required:true,
     type: Number
   },
-  depositLimit:{
+  deposit_limit:{
     type: Number
   },
-  lockupTime:{
+  lockup_time:{
     required: true,
     type: Number
   },
-  profitEst:{
+  profit_est:{
     required: true,
     type: Number
   },
-  lossEst:{
+  loss_est:{
     required: true,
     type: Number
   }
