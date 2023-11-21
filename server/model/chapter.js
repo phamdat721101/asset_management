@@ -1,12 +1,16 @@
 const mongoose = require("mongoose");
 
 const chapterSchema = mongoose.Schema({
+  vaultAdr:{
+    required: true,
+    type: String
+  },
   vaultName: {
     required: true,
     type: String,
     unique: 1
   },
-  owner: {
+  manager: {
     required: true,
     type: String,
     unique: 1
@@ -14,6 +18,25 @@ const chapterSchema = mongoose.Schema({
   vaultDesc: {
     required: true,
     type: String
+  },
+  symbol: {
+    required: true,
+    type: String
+  },
+  depositAsset: {
+    required: true,
+    type: String
+  },
+  managementFee:{
+    required:true,
+    type: Number
+  },
+  depositLimit:{
+    type: Number
+  },
+  lockupTime:{
+    required: true,
+    type: Number
   }
 });
 

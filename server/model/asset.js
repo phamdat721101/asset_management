@@ -6,6 +6,10 @@ const assetSchema = mongoose.Schema({
     type: String,
     unique: true
   },
+  vaultAdr:{
+    required: true,
+    type: String,
+  },
   transactionHash: {
     required: true,
     type: String,
