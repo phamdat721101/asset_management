@@ -41,6 +41,14 @@ const chapterSchema = mongoose.Schema({
   lockupTime:{
     required: true,
     type: Number
+  },
+  profitEst:{
+    required: true,
+    type: Number
+  },
+  lossEst:{
+    required: true,
+    type: Number
   }
 });
 
