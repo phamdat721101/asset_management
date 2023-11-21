@@ -39,7 +39,7 @@ app.get("/", (req, res) => res.send("Hello World!"));
 //                  Admin                        //
 //-----------------------------------------------//
 
-//-------------Add Chapter------------//
+//-------------Add Vault------------//
 
 app.post("/api/create_vault", (req, res) => {
   const chapters = new Chapter(req.body);
@@ -47,7 +47,7 @@ app.post("/api/create_vault", (req, res) => {
     if (err) return res.json({ success: false, err });
     res.status(200).json({
       success: true,
-      chapters: doc
+      vault: doc
     });
   });
 });
@@ -166,9 +166,9 @@ app.get("/api/investments/:owner", (req, res) => {
 //                  USER                          //
 //------------------------------------------------//
 
-//Get All Chapters//
+//Get All Vaults//
 
-app.get("/api/chapters/get_all", (req, res) => {
+app.get("/api/vaults", (req, res) => {
   Chapter.find({}, (err, chapters) => {
     if (err) return res.status(400).send(err);
     res.status(200).send(chapters);
