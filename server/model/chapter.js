@@ -31,6 +31,10 @@ const chapterSchema = mongoose.Schema({
     required:true,
     type: Number
   },
+  performanceFee:{
+    required:true,
+    type: Number
+  },
   depositLimit:{
     type: Number
   },
