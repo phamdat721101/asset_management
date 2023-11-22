@@ -3,12 +3,12 @@ const mongoose = require("mongoose");
 const chapterSchema = mongoose.Schema({
   vault_adr:{
     required: true,
-    type: String
+    type: String,
+    unique: 1
   },
   vault_name: {
     required: true,
     type: String,
-    unique: 1
   },
   manager: {
     required: true,
