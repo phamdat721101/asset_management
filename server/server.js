@@ -11,7 +11,9 @@ mongoose.Promise = global.Promise;
 mongoose.connect("mongodb://0.0.0.0:27017");
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: '*'
+}));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
